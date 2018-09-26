@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3body</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+        /* header的设置 */
+        
+        header {
+            width: 100%;
+            min-width: 100px;
+            height:700px;
+            background: url(http://pf1hm9ap6.bkt.clouddn.com/%E6%98%9F%E9%99%85.jpeg) center center no-repeat;
+            background-size: cover;
+            padding: 1px;
+        }
+        nav {
+            width: 100%;
+            position: relative;
+        }
+        nav>a {
+            font-size: 30px;
+            color: yellow;
+            float: left;
+            display: block;
+            padding: 3px;
+            margin: 20px 20px 20px 80px;
+        }
+        .abstract {
+            float: right;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 35px 80px 0 0;
+        }
+        .abstract>li {
+            float: left;
+            display: block;
+            font-size: 20px;
+        }
+        .abstract>li>a {
+            color: white;
+            padding: 5px;
+        }
+        .abstract>li>a:hover {
+            color: white;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 0, 0.89);
+        } 
+        header>div {
+            position: absolute;
+            left: 50%;
+            top: 60%;
+            transform: translate(-50%,-50%);
+            min-width:100px;
+            color: yellow;
+        }
+        .consider>h3,h1 {
+            display: block;
+            white-space: nowrap;
+            text-align: center;
+        }
+        .consider>button {
+            display: block;
+            margin: 30px auto;
+            padding: 10px 60px;
+            background-color: yellow;
+            border: none;
+            border-radius: 5px;
+            font: 40px white;
+            font-weight: bold;
+            cursor: pointer;
+            outline: none;
+        }
+        .consider>button:hover {
+            background-color: #ebf00f;
+        }
+        .consider>h3 {
+            font-size: 30px;
+            padding: 10px;
+            letter-spacing: 2px;
+            margin-bottom: 10px;  
+        }
+        .consider>h1 {
+            font-size: 50px;
+            padding: 10px; 
+            letter-spacing: 4px;  
+        }
+
+        /* intro */
+        #intro {
+            width: 100%;
+            min-width: 100px;
+            background: url(http://pf1hm9ap6.bkt.clouddn.com/%E6%98%9F%E7%A9%BA%E5%9B%BE.jpg) center center no-repeat;
+            background-size: cover;
+            padding: 1px;
+        }
+        @font-face {
+            font-family: 'iconfont';  /* project id 841689 */
+            src: url('//at.alicdn.com/t/font_841689_4imi8m07lea.eot');
+            src: url('//at.alicdn.com/t/font_841689_4imi8m07lea.eot?#iefix') format('embedded-opentype'),
+            url('//at.alicdn.com/t/font_841689_4imi8m07lea.woff') format('woff'),
+            url('//at.alicdn.com/t/font_841689_4imi8m07lea.ttf') format('truetype'),
+            url('//at.alicdn.com/t/font_841689_4imi8m07lea.svg#iconfont') format('svg');
+            }
+        .part>span {
+            font-family: 'iconfont';
+            display: inline-block;
+            text-align: center;
+            font-size: 50px;
+            padding: 20px;
+            background-color:blue;
+            color: white;
+            border-radius: 50%;
+        }
+        #intro>h1 {
+            margin-top: 200px;
+            font-size: 40px;
+            letter-spacing: 5px;
+            color: white; 
+        }
+        #intro>p {
+            margin:30px auto;
+            text-align: center;
+            font-style: italic;
+            color:#e3e3e3;       
+        }
+        #intro>ul{
+            margin: 80px 100px;
+            text-align: center;
+            overflow: hidden;
+            min-width: 720px;
+        }
+        .fir-intro{
+            float: left;
+            width: 300px;
+        }   
+        .thr-intro{
+            float: right;
+            width: 300px;
+        }
+        .sec-intro{
+            width: 300px;
+            margin: 0 auto;
+            display: inline-block;
+        } 
+        .part>p,h5 {
+            text-align: center;
+            margin: 20px 0px;
+        } 
+        .part>h5 {
+            font-size: 18px;
+            color: white;
+        }
+        .part>p {
+            color: rgb(165, 159, 159);
+            font-size: 14px;
+            text-align: left;
+        }
+        /* character */
+        main {
+            width: 100%;
+            min-width: 100px; 
+            padding: 1px; 
+            background-color: #ebebeb;
+        }
+        #character>h1 {
+            margin-top: 150px;
+            font-size: 40px;
+            letter-spacing: 5px;
+            color: black;  
+        }
+        #character>p {
+            margin:30px auto;
+            text-align: center;
+            font-style: italic;
+            color:black; 
+        }
+        #character>ul {
+            margin: 70px 80px 30px 100px;
+            overflow: hidden;
+        }
+        #character>ul>li {
+            float: left;
+            display: inline-block;
+            margin: 0px 20px 20px 0px;
+            width: 368px;
+            text-align: center;
+            background: white;
+        }
+
+        .photo>a{
+            display: block;
+            width: 100%;
+            height: 200px;
+            font: bold 80px white;
+            position: relative;
+        } 
+        .photo>a>img {
+            display: block;
+            width: 100%;
+            height: 200px;
+        } 
+        .target {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            color: white;
+            background: rgba(0,0,255,0.5);
+            position:absolute;
+            width: 368px;
+            height:200px;
+            left: 0;
+            top: 0;      
+        }
+        .photo>a:hover .target {
+            display: flex;
+        }
+        .photo>h3 {
+            padding-top: 25px;
+        }
+        .photo>p {
+            padding-bottom: 25px;
+            margin-top: 10px;
+            margin-bottom: 0px;
+            color: #9d9d9d;
+            font-style: italic;
+        }
+        /* author */
+        section {
+            width: 100%;
+            min-width: 100px;
+            padding: 1px;
+        }
+        section>h1 {
+            margin-top: 200px;
+            font-size: 40px;
+            letter-spacing: 5px;
+        }
+        section>p {
+            margin:30px auto 60px ;
+            text-align: center;
+            font-style: italic;
+        }
+        .book {
+            position: relative;
+        }
+        .book>img {
+            border:5px solid #ccc;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto; 
+        }
+        .yinhejiang>strong {
+            position: absolute;
+            left: 35%;
+            top: 0%;
+        }
+        .yinhejiang>p {
+            position: absolute;
+            left: 16%;
+            top: 0%;
+            width: 25%;
+            text-align: left;
+            margin-top: 30px;
+        }
+        .zhao>strong {
+            position: absolute;
+            right: 35%;
+            top: 0%;
+        }
+        .zhao>p {
+            position: absolute;
+            right: 16%;
+            top: 0%;
+            width: 25%;
+            text-align: left;
+            margin-top: 30px;
+        }
+        .xingyun>strong {
+            position: absolute;
+            left: 35%;
+            top: 0%;
+        }
+        .xingyun>p {
+            position: absolute;
+            left: 16%;
+            top: 0%;
+            width: 25%;
+            text-align: left;
+            margin-top: 30px;
+        }
+        .yuguo>strong {
+            position: absolute;
+            right: 35%;
+            top: 0%;
+        }
+        .yuguo>p {
+            position: absolute;
+            right: 16%;
+            top: 0%;
+            width: 25%;
+            text-align: left;
+            margin-top: 30px;
+        }
+        .book::after {
+            content: "";
+            width: 1px;
+            height: 100px;
+            border: 2px solid #ccc;
+            display: block;
+            background: #ccc;
+            margin:0 auto;
+        }
+        section>div>span {
+            border:5px solid #ccc;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            display: flex;
+            margin: 0 auto 30px;
+            background: blue; 
+            color:white;
+            font-size: 25px; 
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        /* 三体社区 */
+        #community {
+            width: 100%;
+            min-width: 100px;
+            padding: 1px; 
+            background: rgb(247,247,247);
+        }
+        #community>h1 {
+            margin-top: 200px;
+            font-size: 40px;
+            letter-spacing: 5px;
+        }
+        #community>p {
+            margin:30px auto;
+            text-align: center;
+            font-style: italic;       
+        }
+        #community>ul{
+            margin: 80px 100px;
+            text-align: center;
+            overflow: hidden;
+            min-width: 720px;
+        }
+        .red-base{
+            float: left;
+            width: 300px;
+        }   
+        .science{
+            float: right;
+            width: 300px;
+        }
+        .four-space{
+            width: 300px;
+            margin: 0 auto;
+            display: inline-block;
+        } 
+        .forum>p,h5 {
+            text-align: center;
+            margin: 20px 0px;
+        } 
+        .forum>h5 {
+            font-size: 18px;
+            color:black;
+        }
+        .forum>p {
+            color: rgb(165, 159, 159);
+            font-size: 14px;
+            text-align: center;
+        }
+        .forum>img {
+            width: 255px;
+            height: 255px;
+            border-radius: 50%;
+        }
+        .forum>a {
+            display: inline-block;
+            color: white;
+            background: black;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            padding-top: 11px;
+        }
+        .forum>a:hover {
+            background: blue;
+        }
+        #community:last-child {
+            padding-bottom: 100px;
+        }
+        /* 尾部 */
+        footer {
+            width: 100%;
+            min-width: 100px;
+            padding: 1px;
+            background: url(https://pic3.zhimg.com/v2-3e5c6c99f14bf22b5079b0b6a1b85d77_r.jpg) 0 0 no-repeat;
+            background-size: cover; 
+            position: relative;
+        }
+        footer>h1 {
+            margin-top: 200px;
+            font-size: 40px;
+            letter-spacing: 5px;
+            color: white;
+        }
+        footer>p {
+            margin:30px auto;
+            text-align: center;
+            font-style: italic;
+            color: white;       
+        }
+        footer>form {
+            margin: 80px 100px;
+            text-align: center;
+            overflow: hidden;
+            min-width: 720px;
+        }
+        footer>form>input[type=text] {
+            float: left;
+            width: calc(50% - 30px);
+            height: 55px;
+            margin-bottom: 23px;
+            border-radius: 4px;
+            text-indent: 2em;
+            outline: none;
+        }
+        ::-webkit-input-placeholder {
+            color: rgb(187,187,187);
+        }
+        footer>form>textarea {
+            float: right;
+            border-radius: 4px;
+            margin-bottom: 22px;
+            text-align: left;
+            padding: 18px 18px 0px 18px;
+            outline: none;
+        }
+        textarea::-webkit-input-placeholder {
+            color: rgb(187,187,187);
+        }
+        footer>form>button {
+            height: 70px;
+            width: 220px;
+            display: block;
+            margin: 30px auto;
+            padding: 10px 60px;
+            background-color: yellow;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            outline: none;
+        }
+        footer>form>button:hover {
+            background-color: #ecec00;
+        }
+        /* 备注 */
+        .other>ul{
+            text-align: center;
+            width:600px;
+            margin: 0 auto;
+        }
+        .other>ul>li {
+            display: inline-block;
+           
+            background: black;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            padding-top: 11px;
+        }
+        .other>ul>li>a {
+            color: white;
+        }
+        .other>ul>li:hover {
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a  class="clearfix" href="#">星际航行</a>
+            <ul class="abstract clearfix">
+                <li><a href="#intro">小说介绍</a></li>
+                <li><a href="#character">重要角色</a></li>
+                <li><a href="#author">作者介绍</a></li>
+                <li><a href="#community">三体社区</a></li>
+                <li><a href="#join">帮助支持</a></li>
+            </ul>
+        </nav>
+        <div class="consider">
+            <h3>准备好了吗？</h3>
+            <h1>让我们开始三体的奇幻之旅！</h1>
+            <button>GO!</button>
+        </div>
+    </header>
+    <div id="intro">
+        <h1>小说介绍</h1>
+        <p>《三体》是刘慈欣创作的系列长篇科幻小说，由《三体》、《三体Ⅱ·黑暗森林》、《三体Ⅲ·死神永生》三本小说组成</p>
+        <ul class="clearfix">
+            <li class="fir-intro part">
+                <span class="iconfont">&#xe621;</span>
+                <h5>地球往事</h5>
+                <p>《三体》系列小说第一部的英文版由刘宇昆执笔翻译，于2015年4月16日入围美国2015年雨果奖最佳小说提名名单。2015年8月23日获得2015年雨果奖最佳小说奖</p>
+            </li>
+            <li class="sec-intro part">
+                <span class="iconfont">&#xe8fb;</span>
+                <h5>黑暗丛林</h5>
+                <p>《三体-黑暗森林》是全书中情节最跌宕起伏的一部分，在人类绝望的挣扎中，人性的善恶表现得玲离尽致，三体和人类的斗智斗勇更是精彩绝伦</p>
+            </li>
+            <li class="thr-intro part">
+                <span class="iconfont">&#xe600;</span>
+                <h5>死神永生</h5>
+                <p>《三体3：死神永生》获得2013年度第9届全国优秀儿童文学奖科幻文学奖，不过这都是锦上添花，其真正令人拍案叫绝的是作者的想象力，这是一种没有硝烟，没有胜利的星际大战</p>
+            </li>
+        </ul>
+    </div>
+    <main id="character">
+        <h1>重要角色</h1>
+        <p>在三本书中，重要的角色的简单介绍</p>
+        <ul class="clearfix">
+            <li class= "photo ye">
+                <a href="https://baike.baidu.com/item/%E5%8F%B6%E6%96%87%E6%B4%81">
+                    <span class="target">+</span>
+                    <img src="http://pf1hm9ap6.bkt.clouddn.com/%E5%8F%B6%E6%96%87%E6%B4%81.png" alt="">
+                </a>
+                <h3>叶文洁</h3>
+                <p>这是人类的落日</p>
+            </li >
+            <li class= "photo wang">
+                <a href="">
+                    <img src="http://pf1hm9ap6.bkt.clouddn.com/%E6%B1%AA%E6%B7%BC.jpg" alt="">
+                    <span class="target">+</span>
+                </a>
+                <h3>汪淼</h3>
+                <p>你的无畏来自无知</p>
+            </li>
+            <li class= "photo shi">
+                <a href="">
+                    <img src="http://pf1hm9ap6.bkt.clouddn.com/%E5%8F%B2%E5%BC%BA.jpg" alt="">
+                    <span class="target">+</span>
+                </a>
+                <h3>史强</h3>
+                <p>虫子从来就没有被真正战胜过。</p>
+            </li>
+            <li class= "photo luo">
+                <a href="">
+                    <img src="http://pf1hm9ap6.bkt.clouddn.com/%E7%BD%97%E8%BE%91.jpg" alt="">
+                    <span class="target">+</span>
+                </a>
+                <h3>罗辑</h3>
+                <p>人类不感谢罗辑</p>
+            </li>
+            <li class= "photo cheng">
+                <a href="">
+                    <img src="http://pf1hm9ap6.bkt.clouddn.com/%E7%A8%8B%E5%BF%83.jpg" alt="">
+                    <span class="target">+</span>
+                </a>
+                <h3>程心</h3>
+                <p>人类的选择</p>
+            </li>
+            <li class= "photo yun">
+                <a href="">
+                    <img src="http://pf1hm9ap6.bkt.clouddn.com/%E4%BA%91%E5%A4%A9%E6%98%8E.jpg" alt="">
+                    <span class="target">+</span>
+                </a>
+                <h3>云天明</h3>
+                <p>送你一颗星星</p>
+            </li>
+        </ul>
+    </main>
+    <section id="author">
+        <h1>作者介绍</h1>
+        <p>介绍作者主要的创作经历</p>
+        <div>
+        <div class="book yinhejiang">
+            <img src="http://pf1hm9ap6.bkt.clouddn.com/%E4%B9%A6%E7%B1%8D1.jpg" alt="">
+            <strong>1999-2006</strong>
+            <p>刘大在这几年时间持续获奖银河奖，其为中国幻想小说界的最高荣誉奖项，也是中国大陆惟一的科幻小说奖。获奖作品代表着中国大陆科幻创作的最高水平</p>
+        </div>
+        <div class="book zhao">
+            <img src="http://pf1hm9ap6.bkt.clouddn.com/%E4%B9%A6%E7%B1%8D2.jpg" alt="">
+            <strong>2007-2009</strong>
+            <p>刘大获得“赵树理文学奖”，是山西省的最高文学奖，标志着刘大开始多元化发展。“赵树理文学奖”设立作品奖、文学新人奖、优秀编辑奖、荣誉奖四大奖项。其中作品奖分为长篇小说奖、中篇小说奖、短篇小说奖、诗歌奖、散文奖、报告文学奖、儿童文学奖、影视戏剧文学奖、文学评论奖。
+                </p>
+        </div>
+        <div class="book xingyun">
+            <img src="http://pf1hm9ap6.bkt.clouddn.com/%E4%B9%A6%E7%B1%8D3.jpg" alt="">
+            <strong>2010-2013</strong>
+            <p>刘大获得全球华语科幻星云奖，标志刘大的作品走向世界，这是由世界华人科幻协会（World Chinese Science Fiction Association，CSFA）颁发的科幻奖项，自2010年起每年颁发一次。该奖项也是首个覆盖所有华人科幻作品的奖项。</p>
+        </div>
+        <div class="book yuguo">
+            <img src="http://pf1hm9ap6.bkt.clouddn.com/%E4%B9%A6%E7%B1%8D4.jpg" alt="">
+            <strong>2013-2017</strong>
+            <p>刘大获得雨果奖，三体封神。雨果奖作为世上其中一个最有荣誉的科幻作品奖，雨果奖被称为“在科幻及奇幻创作中其中一个最高的荣誉”</p>
+        </div>
+        <span>期待刘大的佳作</span>
+        </div>
+    </section>
+    <div id="community">
+        <h1>三体社区</h1>
+        <p>三体社区是游族创建的一个爱好社区</p>
+        <ul class="clearfix">
+            <li class="red-base forum">
+                <img src="http://pf1hm9ap6.bkt.clouddn.com/%E7%BA%A2%E5%B2%B8%E5%9F%BA%E5%9C%B0.jpg" alt="">
+                <h5>红岸基地</h5>
+                <p>三体影视</p> 
+                <a href="">QQ</a>
+                <a href="">WT</a>
+                <a href="">f</a>
+            </li>
+            <li class="four-space forum">
+                <img src="http://pf1hm9ap6.bkt.clouddn.com/%E5%9B%9B%E7%BB%B4%E7%A9%BA%E9%97%B4.jpeg" alt="">
+                <h5>四维空间</h5>
+                <p>粉丝杂谈</p>
+                <a href="">QQ</a>
+                <a href="">WT</a>
+                <a href="">f</a>
+            </li>
+            <li class="science forum">
+                <img src="http://pf1hm9ap6.bkt.clouddn.com/%E7%A7%91%E5%AD%A6%E8%BE%B9%E7%95%8C.jpg" alt="">
+                <h5>科学边界</h5>
+                <p>泛科幻内容</p>
+                <a href="">QQ</a>
+                <a href="">WT</a>
+                <a href="">f</a>
+            </li>
+        </ul>
+        <p>让世界为你而闪烁</p>
+    </div>
+    <footer id="join">
+        <h1>加入我们</h1>
+        <p>您的信息我们将严格保密</p>
+        <form action="" class="clearfix" method="POST">
+            <textarea  placeholder="建议" name="message" id="" cols="71" rows="14"></textarea>
+            <input type="text" name="name" placeholder="姓名">
+            <input type="text" name="email" placeholder="邮箱">
+            <input  class="clearfix" type="text" name="phone" placeholder="电话">
+            
+            <button type="button" style="color:white;font-size:20px;">发送信息</button>
+        </form> 
+    </footer>
+    <div class="other">
+        <span>Copyright © Your Website 2018</span>
+        <ul>
+            <li><a href="">QQ</a></li>
+            <li><a href="">WT</a></li>
+            <li><a href="">f</a></li>
+        </ul>
+    </div>
+</body>
+</html>

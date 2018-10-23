@@ -1,0 +1,482 @@
+
+        /* header的设置 */
+        
+        header {
+            width: 100%;
+            min-width: 100px;
+            height:700px;
+            background: url(https://github-1257772833.cos.ap-chengdu.myqcloud.com/%E6%98%9F%E9%99%85.jpeg) center center no-repeat;
+            background-size: cover;
+            padding: 1px;
+        }
+        nav {
+            width: 100%;
+            position: relative;
+        }
+        nav>a {
+            font-size: 30px;
+            color: yellow;
+            float: left;
+            display: block;
+            padding: 3px;
+            margin: 20px 20px 20px 80px;
+        }
+        .abstract {
+            float: right;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 35px 80px 0 0;
+        }
+        .abstract>li {
+            float: left;
+            display: block;
+            font-size: 20px;
+        }
+        .abstract>li>a {
+            color: white;
+            padding: 5px;
+        }
+        .abstract>li>a:hover {
+            color: white;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 0, 0.89);
+        } 
+        header>div {
+            position: absolute;
+            left: 50%;
+            top: 60%;
+            transform: translate(-50%,-50%);
+            min-width:100px;
+            color: yellow;
+        }
+        .consider>h3,h1 {
+            display: block;
+            white-space: nowrap;
+            text-align: center;
+        }
+        .consider>button {
+            display: block;
+            margin: 30px auto;
+            padding: 10px 60px;
+            background-color: yellow;
+            border: none;
+            border-radius: 5px;
+            font: 40px white;
+            font-weight: bold;
+            cursor: pointer;
+            outline: none;
+        }
+        .consider>button:hover {
+            background-color: #ebf00f;
+        }
+        .consider>h3 {
+            font-size: 30px;
+            padding: 10px;
+            letter-spacing: 2px;
+            margin-bottom: 10px;  
+        }
+        .consider>h1 {
+            font-size: 50px;
+            padding: 10px; 
+            letter-spacing: 4px;  
+        }
+
+        /* intro */
+        #intro {
+            width: 100%;
+            min-width: 100px;
+            background: url(https://github-1257772833.cos.ap-chengdu.myqcloud.com/%E6%98%9F%E7%A9%BA%E5%9B%BE.jpg) center center no-repeat;
+            background-size: cover;
+            padding: 1px;
+        }
+        @font-face {
+            font-family: 'iconfont';  /* project id 841689 */
+            src: url('//at.alicdn.com/t/font_841689_4imi8m07lea.eot');
+            src: url('//at.alicdn.com/t/font_841689_4imi8m07lea.eot?#iefix') format('embedded-opentype'),
+            url('//at.alicdn.com/t/font_841689_4imi8m07lea.woff') format('woff'),
+            url('//at.alicdn.com/t/font_841689_4imi8m07lea.ttf') format('truetype'),
+            url('//at.alicdn.com/t/font_841689_4imi8m07lea.svg#iconfont') format('svg');
+            }
+        .part>span {
+            font-family: 'iconfont';
+            display: inline-block;
+            text-align: center;
+            font-size: 50px;
+            padding: 20px;
+            background-color:blue;
+            color: white;
+            border-radius: 50%;
+        }
+        #intro>h1 {
+            margin-top: 200px;
+            font-size: 40px;
+            letter-spacing: 5px;
+            color: white; 
+        }
+        #intro>p {
+            margin:30px auto;
+            text-align: center;
+            font-style: italic;
+            color:#e3e3e3;       
+        }
+        #intro>ul{
+            margin: 80px 100px;
+            text-align: center;
+            overflow: hidden;
+            min-width: 720px;
+        }
+        .fir-intro{
+            float: left;
+            width: 300px;
+        }   
+        .thr-intro{
+            float: right;
+            width: 300px;
+        }
+        .sec-intro{
+            width: 300px;
+            margin: 0 auto;
+            display: inline-block;
+        } 
+        .part>p,h5 {
+            text-align: center;
+            margin: 20px 0px;
+        } 
+        .part>h5 {
+            font-size: 18px;
+            color: white;
+        }
+        .part>p {
+            color: rgb(165, 159, 159);
+            font-size: 14px;
+            text-align: left;
+        }
+        /* character */
+        main {
+            width: 100%;
+            min-width: 100px; 
+            padding: 1px; 
+            background-color: #ebebeb;
+        }
+        #character>h1 {
+            margin-top: 150px;
+            font-size: 40px;
+            letter-spacing: 5px;
+            color: black;  
+        }
+        #character>p {
+            margin:30px auto;
+            text-align: center;
+            font-style: italic;
+            color:black; 
+        }
+        #character>ul {
+            margin: 70px 80px 30px 100px;
+            overflow: hidden;
+        }
+        #character>ul>li {
+            float: left;
+            display: inline-block;
+            margin: 0px 20px 20px 0px;
+            width: 368px;
+            text-align: center;
+            background: white;
+        }
+
+        .photo>a{
+            display: block;
+            width: 100%;
+            height: 200px;
+            font: bold 80px white;
+            position: relative;
+        } 
+        .photo>a>img {
+            display: block;
+            width: 100%;
+            height: 200px;
+        } 
+        .target {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            color: white;
+            background: rgba(0,0,255,0.5);
+            position:absolute;
+            width: 368px;
+            height:200px;
+            left: 0;
+            top: 0;      
+        }
+        .photo>a:hover .target {
+            display: flex;
+        }
+        .photo>h3 {
+            padding-top: 25px;
+        }
+        .photo>p {
+            padding-bottom: 25px;
+            margin-top: 10px;
+            margin-bottom: 0px;
+            color: #9d9d9d;
+            font-style: italic;
+        }
+        /* author */
+        section {
+            width: 100%;
+            min-width: 100px;
+            padding: 1px;
+        }
+        section>h1 {
+            margin-top: 200px;
+            font-size: 40px;
+            letter-spacing: 5px;
+        }
+        section>p {
+            margin:30px auto 60px ;
+            text-align: center;
+            font-style: italic;
+        }
+        .book {
+            position: relative;
+        }
+        .book>img {
+            border:5px solid #ccc;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto; 
+        }
+        .yinhejiang>strong {
+            position: absolute;
+            left: 35%;
+            top: 0%;
+        }
+        .yinhejiang>p {
+            position: absolute;
+            left: 16%;
+            top: 0%;
+            width: 25%;
+            text-align: left;
+            margin-top: 30px;
+        }
+        .zhao>strong {
+            position: absolute;
+            right: 35%;
+            top: 0%;
+        }
+        .zhao>p {
+            position: absolute;
+            right: 16%;
+            top: 0%;
+            width: 25%;
+            text-align: left;
+            margin-top: 30px;
+        }
+        .xingyun>strong {
+            position: absolute;
+            left: 35%;
+            top: 0%;
+        }
+        .xingyun>p {
+            position: absolute;
+            left: 16%;
+            top: 0%;
+            width: 25%;
+            text-align: left;
+            margin-top: 30px;
+        }
+        .yuguo>strong {
+            position: absolute;
+            right: 35%;
+            top: 0%;
+        }
+        .yuguo>p {
+            position: absolute;
+            right: 16%;
+            top: 0%;
+            width: 25%;
+            text-align: left;
+            margin-top: 30px;
+        }
+        .book::after {
+            content: "";
+            width: 1px;
+            height: 100px;
+            border: 2px solid #ccc;
+            display: block;
+            background: #ccc;
+            margin:0 auto;
+        }
+        section>div>span {
+            border:5px solid #ccc;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            display: flex;
+            margin: 0 auto 30px;
+            background: blue; 
+            color:white;
+            font-size: 25px; 
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        /* 三体社区 */
+        #community {
+            width: 100%;
+            min-width: 100px;
+            padding: 1px; 
+            background: rgb(247,247,247);
+        }
+        #community>h1 {
+            margin-top: 200px;
+            font-size: 40px;
+            letter-spacing: 5px;
+        }
+        #community>p {
+            margin:30px auto;
+            text-align: center;
+            font-style: italic;       
+        }
+        #community>ul{
+            margin: 80px 100px;
+            text-align: center;
+            overflow: hidden;
+            min-width: 720px;
+        }
+        .red-base{
+            float: left;
+            width: 300px;
+        }   
+        .science{
+            float: right;
+            width: 300px;
+        }
+        .four-space{
+            width: 300px;
+            margin: 0 auto;
+            display: inline-block;
+        } 
+        .forum>p,h5 {
+            text-align: center;
+            margin: 20px 0px;
+        } 
+        .forum>h5 {
+            font-size: 18px;
+            color:black;
+        }
+        .forum>p {
+            color: rgb(165, 159, 159);
+            font-size: 14px;
+            text-align: center;
+        }
+        .forum>img {
+            width: 255px;
+            height: 255px;
+            border-radius: 50%;
+        }
+        .forum>a {
+            display: inline-block;
+            color: white;
+            background: black;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            padding-top: 11px;
+        }
+        .forum>a:hover {
+            background: blue;
+        }
+        #community:last-child {
+            padding-bottom: 100px;
+        }
+        /* 尾部 */
+        footer {
+            width: 100%;
+            min-width: 100px;
+            padding: 1px;
+            background: url(https://github-1257772833.cos.ap-chengdu.myqcloud.com/%E5%90%AF%E8%88%AA.jpg) 0 0 no-repeat;
+            background-size: cover; 
+            position: relative;
+        }
+        footer>h1 {
+            margin-top: 200px;
+            font-size: 40px;
+            letter-spacing: 5px;
+            color: white;
+        }
+        footer>p {
+            margin:30px auto;
+            text-align: center;
+            font-style: italic;
+            color: white;       
+        }
+        footer>form {
+            margin: 80px 100px;
+            text-align: center;
+            overflow: hidden;
+            min-width: 720px;
+        }
+        footer>form>input[type=text] {
+            float: left;
+            width: calc(50% - 30px);
+            height: 55px;
+            margin-bottom: 23px;
+            border-radius: 4px;
+            text-indent: 2em;
+            outline: none;
+        }
+        ::-webkit-input-placeholder {
+            color: rgb(187,187,187);
+        }
+        footer>form>textarea {
+            float: right;
+            border-radius: 4px;
+            margin-bottom: 22px;
+            text-align: left;
+            padding: 18px 18px 0px 18px;
+            outline: none;
+        }
+        textarea::-webkit-input-placeholder {
+            color: rgb(187,187,187);
+        }
+        footer>form>button {
+            height: 70px;
+            width: 220px;
+            display: block;
+            margin: 30px auto;
+            padding: 10px 60px;
+            background-color: yellow;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            outline: none;
+        }
+        footer>form>button:hover {
+            background-color: #ecec00;
+        }
+        /* 备注 */
+        .other>ul{
+            text-align: center;
+            width:600px;
+            margin: 0 auto;
+        }
+        .other>ul>li {
+            display: inline-block;
+           
+            background: black;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            padding-top: 11px;
+        }
+        .other>ul>li>a {
+            color: white;
+        }
+        .other>ul>li:hover {
+            background: blue;
+        }
+    
